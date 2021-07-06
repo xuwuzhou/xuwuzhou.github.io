@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 layout: null
 ---
@@ -11,4 +12,19 @@ layout: null
       "date"     : "{{ post.date }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
+=======
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+>>>>>>> 09cbcd9f4db2a32a2ae1b3368d22e9dfd47caf1a
 ]
